@@ -1,0 +1,7 @@
+.env
+.venv/
+docs_dir
+docs_dir_1
+vector_db
+.idea/
+__pycache__/
