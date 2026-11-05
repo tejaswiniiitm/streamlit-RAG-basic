@@ -18,6 +18,7 @@ unstructured
 unstructured[pdf]
 opencv-python-headless
 pymupdf
+pymupdf4llm
 
 # LlamaIndex stack
 llama-index
