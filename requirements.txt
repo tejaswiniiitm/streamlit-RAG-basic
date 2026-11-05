@@ -1,20 +1,32 @@
-langchain-unstructured
-langchain-classic
+streamlit
+python-dotenv
+nltk
+torch
+
+# LangChain stack
+langchain
+langchain-core
+langchain-community
 langchain-text-splitters
 langchain-huggingface
-chromadb
 langchain-chroma
 langchain-groq
-sentence-transformers
+langchain-unstructured
+
+# PDF & OCR parsing
 unstructured
 unstructured[pdf]
-nltk
-dotenv
+opencv-python-headless
+pymupdf
+
+# LlamaIndex stack
 llama-index
+llama-index-core
 llama-index-llms-groq
 llama-index-embeddings-huggingface
 llama-index-vector-stores-chroma
 llama-index-readers-file
-pymupdf
-streamlit
-torch
+
+# Embeddings & Vector Stores
+sentence-transformers
+chromadb
