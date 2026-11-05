@@ -31,3 +31,6 @@ llama-index-readers-file
 # Embeddings & Vector Stores
 sentence-transformers
 chromadb
+
+spacy
+https://github.com
