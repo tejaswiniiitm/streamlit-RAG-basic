@@ -10,5 +10,8 @@ class Utils:
         import os
         working_dir = os.path.dirname(os.path.abspath((__file__)))
         docs_dir_path = os.path.join(working_dir, "docs_dir")
-        vector_db_path = os.path.join(working_dir, "vector_db")
+
+        vector_db_path = "/tmp/vector_db"
+        os.makedirs(vector_db_path, exist_ok=True)
+        # vector_db_path = os.path.join(working_dir, "vector_db")
         return docs_dir_path, vector_db_path
