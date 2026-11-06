@@ -37,10 +37,6 @@ if uploaded_files_list and not st.session_state.saved_files:
     shutil.rmtree(SAVE_DIR, ignore_errors=True)
     os.makedirs(SAVE_DIR)
 
-    VECTOR_DB_DIR = "vector_db"
-    shutil.rmtree(VECTOR_DB_DIR, ignore_errors=True)
-    os.makedirs(VECTOR_DB_DIR)
-
     for uploaded_file in uploaded_files_list:
         # Combine directory path with the original file name
         file_path = os.path.join(SAVE_DIR, uploaded_file.name)

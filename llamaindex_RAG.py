@@ -21,13 +21,6 @@ def get_or_create_vector_storage_context(collection_name, vector_db_path):
 
     db_client = chromadb.PersistentClient(path=vector_db_path)
 
-    print("Chroma path:", vector_db_path)
-
-    import os
-    print("Directory exists:", os.path.exists(vector_db_path))
-    print("Directory writable:", os.access(vector_db_path, os.W_OK))
-    print("Directory contents:", os.listdir(vector_db_path))
-
     chroma_collection = db_client.get_or_create_collection(name=collection_name)
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
@@ -78,7 +71,13 @@ class Llamaindex_RAG_Class:
     @staticmethod
     def ingest_docs_and_get_retriever():
         from utils import Utils
+        import os, shutil
         docs_dir_path, vector_db_path = Utils.get_paths()
+
+        vector_db_path += "_llamaindex"
+        shutil.rmtree(vector_db_path, ignore_errors=True)
+        os.makedirs(vector_db_path)
+
         collection_name = "llama_doc_collection"
         document_ingestion(docs_dir_path, vector_db_path, collection_name)
         vector_store = load_vector_store(vector_db_path, collection_name)

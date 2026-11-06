@@ -73,7 +73,13 @@ class Langchain_RAG_Class:
     @staticmethod
     def ingest_docs_and_get_retriever():
         from utils import Utils
+        import os, shutil
+
         docs_dir_path, vector_db_path = Utils.get_paths()
+        vector_db_path += "_langchain"
+        shutil.rmtree(vector_db_path, ignore_errors=True)
+        os.makedirs(vector_db_path)
+
         collection_name = "langchain_doc_collection"
         document_ingestion(docs_dir_path, vector_db_path, collection_name)
         vector_store = load_vector_store(vector_db_path, collection_name)
