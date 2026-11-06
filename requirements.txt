@@ -19,9 +19,6 @@ unstructured[pdf]
 opencv-python-headless
 pymupdf
 pymupdf4llm
-spacy
---find-links https://github.com
-en-core-web-sm
 
 # LlamaIndex stack
 llama-index
