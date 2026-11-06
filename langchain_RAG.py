@@ -69,6 +69,7 @@ def document_ingestion(docs_dir_path, vector_db_path, collection_name):
     text_chunks = load_documents_get_chunks(docs_dir_path)
     create_vector_store_db(text_chunks, vector_db_path, collection_name)
 
+
 class Langchain_RAG_Class:
     @staticmethod
     def ingest_docs_and_get_retriever():
