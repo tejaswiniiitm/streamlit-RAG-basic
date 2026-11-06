@@ -3,6 +3,9 @@ python-dotenv
 nltk
 torch
 
+spacy
+en-core-web-sm
+
 # LangChain stack
 langchain
 langchain-core
@@ -19,6 +22,7 @@ unstructured[pdf]
 opencv-python-headless
 pymupdf
 pymupdf4llm
+
 
 # LlamaIndex stack
 llama-index
