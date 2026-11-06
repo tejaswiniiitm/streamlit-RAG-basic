@@ -20,7 +20,7 @@ opencv-python-headless
 pymupdf
 pymupdf4llm
 spacy
-git+https://github.com
+en-core-web-sm
 
 # LlamaIndex stack
 llama-index
