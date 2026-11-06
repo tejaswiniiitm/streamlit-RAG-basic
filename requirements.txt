@@ -18,7 +18,6 @@ langchain-groq
 langchain-unstructured
 
 # PDF & OCR parsing
-#unstructured
 unstructured[pdf]
 opencv-python-headless
 pymupdf

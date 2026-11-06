@@ -20,6 +20,14 @@ def get_or_create_vector_storage_context(collection_name, vector_db_path):
     from llama_index.core import StorageContext
 
     db_client = chromadb.PersistentClient(path=vector_db_path)
+
+    print("Chroma path:", vector_db_path)
+
+    import os
+    print("Directory exists:", os.path.exists(vector_db_path))
+    print("Directory writable:", os.access(vector_db_path, os.W_OK))
+    print("Directory contents:", os.listdir(vector_db_path))
+
     chroma_collection = db_client.get_or_create_collection(name=collection_name)
     vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
     storage_context = StorageContext.from_defaults(vector_store=vector_store)
