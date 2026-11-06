@@ -19,6 +19,8 @@ unstructured[pdf]
 opencv-python-headless
 pymupdf
 pymupdf4llm
+spacy
+git+https://github.com
 
 # LlamaIndex stack
 llama-index
@@ -32,5 +34,3 @@ llama-index-readers-file
 sentence-transformers
 chromadb
 
-spacy
-https://github.com
